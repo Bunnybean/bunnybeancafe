@@ -1,0 +1,20 @@
+<%- include("partials/header0") %>
+
+<div class="jumbotron text-center">
+    <div class="container review-container">
+        <h1 class="review-title">Please Leave Reviews</h1>
+
+        <% userReviews.forEach(function(user){ %>
+        <p class="reviews"><%= user.review %></p>
+        <% }) %>
+
+        <form action="/submit" method="POST">
+            <div >
+                <input type="text" class="text-center review-text" name="review" placeholder="Write Review" autocomplete="off">
+                <a href="/logout"><button class="btn btn-sm btn-outline-danger logout-btn" type="button" href="/logout">Logout</button></a>
+                <a><button type="submit" class="btn btn-sm btn-danger sbm-btn">Submit</button></a>
+            </div>
+        </form>
+    </div>
+</div>
+<%- include("partials/footer") %>

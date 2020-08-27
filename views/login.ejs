@@ -1,0 +1,36 @@
+<%- include("partials/header0") %>
+
+<div class="container mt-5">
+    <h1>Login</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <form action="/login" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+            <div class="col-lg-4 socialButtonGroup">
+                <a class="btn btn-block btn-social btn-google socialButton" href="/auth/google" role="button"><span class="fa fa-google"></span>Login with Google</a>
+                <a class="btn btn-block btn-social btn-facebook socialButton" href="/auth/facebook" role="button"><span class="fa fa-facebook"></span>Login with Facebook</a>
+                <a class="btn btn-block btn-social btn-twitter socialButton" href="#" role="button"><span class="fa fa-twitter"></span>Login with twitter</a>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="join-message">
+        <h3>Register</h3>
+        <p>Create an account to read & write reviews! </p>
+        <a href="/register"><button class="w3-button w3-black w3-border w3-border-black w3-hover-white w3-round-xxlarge join-button" type="button" href="/register">Join Now</button></a>
+    </div>
+</div>
+
+<%- include("partials/footer") %>
